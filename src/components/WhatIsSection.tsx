@@ -1,4 +1,5 @@
 import { Cpu, Shield, Zap, Globe } from "lucide-react";
+import orisHubPlatform from "@/assets/oris-hub-platform.png";
 
 export const WhatIsSection = () => {
   const features = [
@@ -50,77 +51,36 @@ export const WhatIsSection = () => {
 
           {/* Visualization */}
           <div className="relative">
-            <div className="glass-card rounded-3xl p-8 lg:p-12">
-              {/* AI Engine Visualization */}
-              <div className="relative aspect-square max-w-md mx-auto">
-                {/* Center Hub */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-primary z-10">
-                  <span className="text-2xl font-bold text-background font-display">O</span>
-                </div>
-
-                {/* Orbiting Elements */}
-                {[0, 1, 2, 3, 4, 5].map((i) => (
-                  <div
-                    key={i}
-                    className="absolute top-1/2 left-1/2 w-full h-full"
-                    style={{
-                      animation: `spin ${20 + i * 5}s linear infinite`,
-                      animationDirection: i % 2 === 0 ? "normal" : "reverse",
-                    }}
-                  >
-                    <div
-                      className="absolute w-4 h-4 rounded-full animate-pulse-glow"
-                      style={{
-                        top: "10%",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        background: `hsl(${199 + i * 20} 89% 48%)`,
-                        boxShadow: `0 0 20px hsl(${199 + i * 20} 89% 48% / 0.6)`,
-                      }}
-                    />
-                  </div>
-                ))}
-
-                {/* Connection Lines */}
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
-                  <circle cx="200" cy="200" r="80" fill="none" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="5 5" opacity="0.3" />
-                  <circle cx="200" cy="200" r="120" fill="none" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="5 5" opacity="0.2" />
-                  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="5 5" opacity="0.1" />
-                  <defs>
-                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="hsl(199 89% 48%)" />
-                      <stop offset="100%" stopColor="hsl(270 70% 60%)" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
+            <div className="glass-card rounded-3xl p-6 lg:p-8 overflow-hidden">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 blur-[40px]" />
+              
+              {/* Main Image */}
+              <img
+                src={orisHubPlatform}
+                alt="ORIS HUB - Collaborative AI platform with researchers, developers, and leaders working together"
+                className="relative z-10 w-full rounded-xl animate-float"
+              />
 
               {/* Labels */}
-              <div className="grid grid-cols-3 gap-4 mt-8 text-center">
+              <div className="grid grid-cols-3 gap-4 mt-6 text-center relative z-10">
                 <div>
-                  <p className="text-2xl font-bold text-primary">GPT-4</p>
-                  <p className="text-xs text-muted-foreground">OpenAI</p>
+                  <p className="text-lg font-bold text-primary">Collaborate</p>
+                  <p className="text-xs text-muted-foreground">Together</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-secondary">Claude</p>
-                  <p className="text-xs text-muted-foreground">Anthropic</p>
+                  <p className="text-lg font-bold text-secondary">Innovate</p>
+                  <p className="text-xs text-muted-foreground">Faster</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-accent">Gemini</p>
-                  <p className="text-xs text-muted-foreground">Google</p>
+                  <p className="text-lg font-bold text-accent">Scale</p>
+                  <p className="text-xs text-muted-foreground">Globally</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes spin {
-          from { transform: translate(-50%, -50%) rotate(0deg); }
-          to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-      `}</style>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ParticleBackground } from "./ParticleBackground";
-import heroAiOrb from "@/assets/hero-ai-orb.png";
+import heroAiNexus from "@/assets/hero-ai-nexus.png";
 
 export const HeroSection = () => {
   return (
@@ -75,13 +75,13 @@ export const HeroSection = () => {
           {/* Right: Visual - Supporting the message */}
           <div className="relative flex items-center justify-center order-first lg:order-last animate-scale-in animation-delay-200">
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-secondary/10 to-transparent rounded-full blur-[60px] scale-75" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10 rounded-3xl blur-[80px]" />
             
             {/* Main image */}
             <img
-              src={heroAiOrb}
-              alt="ORIS AI HUB visualization"
-              className="relative z-10 w-full max-w-sm lg:max-w-md xl:max-w-lg animate-float"
+              src={heroAiNexus}
+              alt="ORIS AI HUB - Central AI nexus with neural network connections"
+              className="relative z-10 w-full max-w-xl lg:max-w-2xl xl:max-w-3xl rounded-2xl shadow-2xl animate-float"
             />
           </div>
         </div>
