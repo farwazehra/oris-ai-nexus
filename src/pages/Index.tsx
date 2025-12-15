@@ -1,31 +1,27 @@
-import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
-import { WhatIsSection } from "@/components/WhatIsSection";
-import { WhoIsForSection } from "@/components/WhoIsForSection";
-import { ProblemsSolvedSection } from "@/components/ProblemsSolvedSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { UseCasesSection } from "@/components/UseCasesSection";
-import { RoadmapSection } from "@/components/RoadmapSection";
-import { PricingSection } from "@/components/PricingSection";
-import { CTASection } from "@/components/CTASection";
-import { Footer } from "@/components/Footer";
+import { SwissLabNavbar } from "@/components/SwissLabNavbar";
+import { SwissLabHero } from "@/components/SwissLabHero";
+import { SwissLabProducts } from "@/components/SwissLabProducts";
+import { SwissLabHowItWorks } from "@/components/SwissLabHowItWorks";
+import { SwissLabProfessionals } from "@/components/SwissLabProfessionals";
+import { SwissLabResults } from "@/components/SwissLabResults";
+import { SwissLabBenefits } from "@/components/SwissLabBenefits";
+import { SwissLabCTA } from "@/components/SwissLabCTA";
+import { SwissLabFooter } from "@/components/SwissLabFooter";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      <Navbar />
+      <SwissLabNavbar />
       <main>
-        <HeroSection />
-        <WhatIsSection />
-        <WhoIsForSection />
-        <ProblemsSolvedSection />
-        <BenefitsSection />
-        <UseCasesSection />
-        <RoadmapSection />
-        <PricingSection />
-        <CTASection />
+        <SwissLabHero />
+        <SwissLabProducts />
+        <SwissLabHowItWorks />
+        <SwissLabProfessionals />
+        <SwissLabResults />
+        <SwissLabBenefits />
+        <SwissLabCTA />
       </main>
-      <Footer />
+      <SwissLabFooter />
     </div>
   );
 };
